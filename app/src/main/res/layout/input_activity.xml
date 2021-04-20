@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customCode.input_activity">
+
+
+    <AutoCompleteTextView
+        android:id="@+id/subRegionACText"
+        android:layout_width="117dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/SubRegionText"
+        app:layout_constraintTop_toTopOf="@+id/SubRegionText" />
+
+    <TextView
+        android:id="@+id/CountryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginRight="288dp"
+        android:text="Country:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RegionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginRight="288dp"
+        android:text="Region:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CountryText" />
+
+    <TextView
+        android:id="@+id/SubRegionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginRight="288dp"
+        android:text="Subregion:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RegionText" />
+
+    <TextView
+        android:id="@+id/FromText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginRight="288dp"
+        android:text="From:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SubRegionText" />
+
+    <TextView
+        android:id="@+id/ToText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginRight="288dp"
+        android:text="To:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FromText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <Button
+        android:id="@+id/countryButton"
+        android:layout_width="73dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:onClick="tryChanginScene"
+        android:text="GO"
+        android:textColor="@color/black"
+        app:backgroundTint="@android:color/holo_orange_dark"
+        app:layout_constraintStart_toEndOf="@+id/CountryACText"
+        app:layout_constraintTop_toTopOf="@+id/CountryACText" />
+
+    <Button
+        android:id="@+id/regionButton"
+        android:layout_width="73dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:onClick="tryChanginScene"
+        android:text="GO"
+        android:textColor="@color/black"
+        app:backgroundTint="@android:color/holo_orange_dark"
+        app:layout_constraintStart_toEndOf="@+id/regionACText"
+        app:layout_constraintTop_toTopOf="@+id/regionACText" />
+
+    <Button
+        android:id="@+id/SubRegionButton"
+        android:layout_width="73dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:onClick="tryChanginScene"
+        android:text="GO"
+        android:textColor="@color/black"
+        app:backgroundTint="@android:color/holo_orange_dark"
+        app:layout_constraintStart_toEndOf="@+id/subRegionACText"
+        app:layout_constraintTop_toTopOf="@+id/subRegionACText" />
+
+    <AutoCompleteTextView
+        android:id="@+id/CountryACText"
+        android:layout_width="117dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/CountryText"
+        app:layout_constraintTop_toTopOf="@+id/CountryText" />
+
+    <AutoCompleteTextView
+        android:id="@+id/regionACText"
+        android:layout_width="117dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/RegionText"
+        app:layout_constraintTop_toTopOf="@+id/RegionText" />
+
+    <EditText
+        android:id="@+id/fromEditText"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:hint="YYYY-MM-DD"
+        android:inputType="date"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/FromText"
+        app:layout_constraintTop_toTopOf="@+id/FromText" />
+
+    <EditText
+        android:id="@+id/toEditText"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:hint="YYYY-MM-DD"
+        android:inputType="date"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ToText"
+        app:layout_constraintTop_toTopOf="@+id/ToText" />
+
+    <TextView
+        android:id="@+id/finalQueryErrorTextView"
+        android:layout_width="279dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="48dp"
+        android:text="Data not found for the dates given"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/ToText"
+        app:layout_constraintTop_toBottomOf="@+id/ToText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
